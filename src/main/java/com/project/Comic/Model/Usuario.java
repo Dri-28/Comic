@@ -7,6 +7,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.validation.constraints.NotBlank;
 
 @Entity
 public class Usuario {
@@ -20,6 +21,7 @@ public class Usuario {
     public String id;
 
     @Column
+    @NotBlank
     public String nome;
 
     @Column
@@ -67,11 +69,11 @@ public class Usuario {
     @Override
     public String toString(){
         return "Usuario{" +
-                "id='" + id+'\'' +
-                ",nome='" + nome + '\'' +
-                ",email='" + email + '\'' +
-                "cpf='" + cpf + '\''+
-                "nascimento='" + nascimento+ '\''+
+                "id=' " + id+'\'' +
+                ",nome=' " + nome + '\'' +
+                ",email=  '" + email + '\'' +
+                "cpf='  " + cpf + '\''+
+                "nascimento='  " + nascimento+ '\''+
                 '}';
     };
 
